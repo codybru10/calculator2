@@ -2,16 +2,16 @@ var add = function(number1, number2) {
   return number1 + number2;
 };
 
-var subtract = function(number1, number2) {
-  return number1 - number2;
+var subtract = function(number3, number4) {
+  return number3 - number4;
 };
 
-var multiply = function(number1, number2) {
-  return number1 * number2;
+var multiply = function(number5, number6) {
+  return number5 * number6;
 };
 
-var divide = function(number1, number2) {
-  return number1 / number2;
+var divide = function(number7, number8) {
+  return number7 / number8;
 };
 
 $(document).ready(function() {
@@ -20,6 +20,30 @@ $(document).ready(function() {
   var number1 = parseInt($("#add1").val());
   var number2 = parseInt($("#add2").val());
   var result = add(number1, number2);
-  $("#output").text(result);
-});
+  $("#output1").text(result);
+  });
+
+  $("form#subtract").submit(function(event) {
+  event.preventDefault();
+  var number3 = parseInt($("#subtract1").val());
+  var number4 = parseInt($("#subtract2").val());
+  var result = subtract(number3, number4);
+  $("#output2").text(result);
+  });
+
+  $("form#multiply").submit(function(event) {
+  event.preventDefault();
+  var number5 = parseInt($("#multiply1").val());
+  var number6 = parseInt($("#multiply2").val());
+  var result = multiply(number5, number6);
+  $("#output3").text(result);
+  });
+
+  $("form#divide").submit(function(event) {
+  event.preventDefault();
+  var number7 = parseInt($("#divide1").val());
+  var number8 = parseInt($("#divide2").val());
+  var result = divide(number7, number8);
+  $("#output4").text(result);
+  });
 });
